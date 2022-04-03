@@ -8,6 +8,7 @@ import { GoogleAuthProvider } from "firebase/auth";
  * Firebase
  **************************************/
 // Initialiser Firebase
+export const instanceFirebase = initializeApp(firebaseConfig);
 
 
 /***************************************
@@ -22,4 +23,4 @@ import { GoogleAuthProvider } from "firebase/auth";
  * Firestore
  ***************************************/
 // Initialiser Firestore
-
+export const bdFirestore = getFirestore();
