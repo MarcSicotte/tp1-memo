@@ -1,0 +1,14 @@
+.Utilisateur {
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+}
+
+.Utilisateur .btn-deconnexion {
+  display: block;
+  font-size: 0.70rem;
+}
+/*# sourceMappingURL=Utilisateur.css.map */
