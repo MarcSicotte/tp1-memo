@@ -3,11 +3,10 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import { deconnexion } from '../code/utilisateur-modele'
 
-export default function Utilisateur({util}) {
-  console.log(util);
+export default function Utilisateur({utilisateur}) {
   return (
     <div className="Utilisateur">
-      <span className="nom">{Utilisateur.displayName}</span>
+      <span className="nom">{utilisateur.displayName}</span>
       <Avatar className="avatar" alt="Le même Monsieur Untel" title="Email de l'utilisateur ici" />
       
       <Button 

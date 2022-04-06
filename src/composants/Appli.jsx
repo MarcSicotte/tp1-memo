@@ -27,7 +27,7 @@ export default function Appli() {
       <div className="Appli">
         <header className="appli-entete">
           <img src={logo} className="appli-logo" alt="Memo" />
-          <Utilisateur />
+          <Utilisateur utilisateur={utilisateur} />
         </header>
         <Taches />
         <Controle />

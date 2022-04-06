@@ -38,8 +38,7 @@ export function deconnexion() {
     authFirebase.signOut();
 }
 
-// Remarquez que la fonction suivante n'est pas exportée !!! On n'en a pas 
-// besoin à l'extérieur de ce fichier.
+
 /**
  * Sauvegarder le profil de l'utilisateur connecté dans Firestore
  * 
