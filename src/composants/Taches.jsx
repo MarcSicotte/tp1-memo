@@ -15,12 +15,25 @@ export default function Taches({utilisateur, taches, setTaches, gererAjoutTache 
     ); 
     
     function gererAjouTache(e){
+      let valeurTexte
       //1 prevent.default
       e.preventDefault();
       //attrapper la valeur du text dans form
-      e.target.value;
+       valeurTexte = e.target.elements[0].value;
       // faire appel la function creer de tacheModele
-      
+      if (valeurTexte != null){
+        tacheModele.creer(utilisateur.uid, {titre : valeurTexte}).then(
+          // On augmente les dossiers avec le nouveau document que nous 
+          // venons d'ajouter dans Firestore
+          // Remarquez que le document reçu est un objet complexe Firestore, et 
+          // on doit construire l'objet simple avec le quel nous travaillons qui
+          // contient uniquement les propriétés 'id' et 'titre', 'couleur', 
+          // 'couverture', 'dateModif'
+          doc => setTaches([{id: doc.id, ...doc.data()}, ...taches])
+        );
+      }
+     
+     
     }
 
   return (
